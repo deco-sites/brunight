@@ -11,7 +11,8 @@ import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Informacoes.tsx";
+import * as $$$2 from "./sections/Header.tsx";
+import * as $$$3 from "./sections/Informacoes.tsx";
 
 const manifest: DecoManifest = {
   routes: {
@@ -24,7 +25,8 @@ const manifest: DecoManifest = {
   sections: {
     "./sections/GetStarted.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
-    "./sections/Informacoes.tsx": $$$2,
+    "./sections/Header.tsx": $$$2,
+    "./sections/Informacoes.tsx": $$$3,
   },
   functions: {},
   schemas: {
@@ -90,6 +92,53 @@ const manifest: DecoManifest = {
           "faviconUrl",
           "styleUrls",
           "themeColor",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Header.tsx": {
+      "inputSchema": {
+        "title": " Header",
+        "type": "object",
+        "properties": {
+          "logoSvg": {
+            "type": "string",
+            "title": "Logo Svg",
+          },
+          "navlinks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "href": {
+                  "type": "string",
+                  "title": "Href",
+                },
+                "text": {
+                  "type": "string",
+                  "title": "Text",
+                },
+              },
+              "required": [
+                "href",
+                "text",
+              ],
+            },
+            "title": "Navlinks",
+          },
+          "phoneLabel": {
+            "type": "string",
+            "title": "Phone Label",
+          },
+          "phone": {
+            "type": "string",
+            "title": "Phone",
+          },
+        },
+        "required": [
+          "logoSvg",
+          "phoneLabel",
+          "phone",
         ],
       },
       "outputSchema": null,
