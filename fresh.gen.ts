@@ -14,6 +14,7 @@ import * as $$$1 from "./sections/GetStarted.tsx";
 import * as $$$2 from "./sections/Head.tsx";
 import * as $$$3 from "./sections/Header.tsx";
 import * as $$$4 from "./sections/Informacoes.tsx";
+import * as $$$5 from "./sections/SectionTitle.tsx";
 
 const manifest: DecoManifest = {
   routes: {
@@ -29,6 +30,7 @@ const manifest: DecoManifest = {
     "./sections/Head.tsx": $$$2,
     "./sections/Header.tsx": $$$3,
     "./sections/Informacoes.tsx": $$$4,
+    "./sections/SectionTitle.tsx": $$$5,
   },
   functions: {},
   schemas: {
@@ -191,6 +193,29 @@ const manifest: DecoManifest = {
           "title": {
             "type": "string",
             "title": "Title",
+          },
+        },
+        "required": [
+          "title",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/SectionTitle.tsx": {
+      "inputSchema": {
+        "title": " Section Title",
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+          },
+          "subTitle": {
+            "type": [
+              "string",
+              "null",
+            ],
+            "title": "Sub Title",
           },
         },
         "required": [
