@@ -9,10 +9,11 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/GetStarted.tsx";
-import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Header.tsx";
-import * as $$$3 from "./sections/Informacoes.tsx";
+import * as $$$0 from "./sections/Banner.tsx";
+import * as $$$1 from "./sections/GetStarted.tsx";
+import * as $$$2 from "./sections/Head.tsx";
+import * as $$$3 from "./sections/Header.tsx";
+import * as $$$4 from "./sections/Informacoes.tsx";
 
 const manifest: DecoManifest = {
   routes: {
@@ -23,13 +24,52 @@ const manifest: DecoManifest = {
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: {
-    "./sections/GetStarted.tsx": $$$0,
-    "./sections/Head.tsx": $$$1,
-    "./sections/Header.tsx": $$$2,
-    "./sections/Informacoes.tsx": $$$3,
+    "./sections/Banner.tsx": $$$0,
+    "./sections/GetStarted.tsx": $$$1,
+    "./sections/Head.tsx": $$$2,
+    "./sections/Header.tsx": $$$3,
+    "./sections/Informacoes.tsx": $$$4,
   },
   functions: {},
   schemas: {
+    "./sections/Banner.tsx": {
+      "inputSchema": {
+        "title": " Banner",
+        "type": "object",
+        "properties": {
+          "image": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Image",
+          },
+          "imageMobile": {
+            "format": "image-uri",
+            "type": "string",
+            "title": "Image Mobile",
+          },
+          "altText": {
+            "type": "string",
+            "title": "Alt Text",
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+          },
+          "subTitle": {
+            "type": "string",
+            "title": "Sub Title",
+          },
+        },
+        "required": [
+          "image",
+          "imageMobile",
+          "altText",
+          "title",
+          "subTitle",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/GetStarted.tsx": {
       "inputSchema": {
         "title": " Get Started",
