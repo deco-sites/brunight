@@ -10,7 +10,7 @@ export default function SectionTitle({ title, subTitle }: Props) {
         {title}
       </h2>
       {subTitle && (
-        <p class="font-medium text-lg text-center mt-7 my-auto lg:max-w-[37%]">
+        <p class="font-medium text-lg text-center mt-7 mx-auto lg:max-w-[37%]">
           {subTitle}
         </p>
       )}
