@@ -11,6 +11,7 @@ import { mapProductToAnalyticsItem } from "deco-sites/std/commerce/utils/product
 import { useOffer } from "$store/sdk/useOffer.ts";
 import type { Badge } from "$store/loaders/vtex/badges.ts";
 import type { Product } from "deco-sites/std/commerce/types.ts";
+import Teste from "deco-sites/brunight/islands/Teste.tsx";
 
 export interface Props {
   products: Product[] | null;
@@ -40,6 +41,7 @@ function ProductShelf({
 
   return (
     <div class="w-full container  py-8 flex flex-col gap-12 lg:gap-16 lg:py-10">
+      <Teste product={products[0]} badges={badges ?? []} />
       <Header
         title={title || ""}
         description={description || ""}
