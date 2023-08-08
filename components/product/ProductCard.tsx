@@ -7,6 +7,7 @@ import { useVariantPossibilities } from "$store/sdk/useVariantPossiblities.ts";
 import { mapProductToAnalyticsItem } from "deco-sites/std/commerce/utils/productToAnalyticsItem.ts";
 import { SendEventOnClick } from "$store/sdk/analytics.tsx";
 import type { Product } from "deco-sites/std/commerce/types.ts";
+import Teste from "deco-sites/brunight/islands/Teste.tsx";
 
 export interface Layout {
   basics?: {
@@ -108,6 +109,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
       `}
       data-deco="view-product"
     >
+      <Teste product={product} />
       <SendEventOnClick
         id={id}
         event={{
